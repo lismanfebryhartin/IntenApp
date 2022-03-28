@@ -13,11 +13,10 @@ class MoveWithObjectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_move_with_object)
 
         val tvObject: TextView =
-            findViewById(R.id.tv_data_received)
+            findViewById(R.id.tv_Object_received)
 
-        val person =
-            intent.getParcelableExtra<Person>(EXTRA_PERSON) as Person
-        val text = "name : ${person.name.toString()},\nEmail : ${person.email},\nAge : ${person.age},\nLocation : ${person.city}"
+        val person = intent.getParcelableExtra<Person>(EXTRA_PERSON) as Person
+        val text = "name: ${person.name.toString()}, \nemail: ${person.email}, \nage: ${person.age}, \nlocation: ${person.city}"
         tvObject.text = text
     }
 }
